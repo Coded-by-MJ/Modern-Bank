@@ -9,7 +9,7 @@
 
 # Links
 
-- Live Site URL: [Click to view Live Site](https://coded-by-mj.github.io/Front-end-Mentor-Challenge7/)
+- Live Site URL: [Click to view Live Site](https://coded-by-mj.github.io/Modern-Bank/)
 
 
 
