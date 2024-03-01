@@ -1,5 +1,6 @@
 .row {
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
   margin-top: 0;
   margin-right: -0.75rem;
@@ -79,14 +80,30 @@ header {
   margin-bottom: 2rem;
   border-bottom: 4px solid #E9E9E9;
 }
-header ul {
+header .menu {
+  width: 30px;
+  height: 30px;
+  background-image: url("assets/menu.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: none;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  width: 70%;
+}
+header nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 4rem;
 }
-header ul li a {
+header nav ul li a {
   font-family: "Poppins", sans-serif;
   font-size: 1.375rem;
   font-weight: 400;
@@ -95,7 +112,7 @@ header ul li a {
   text-decoration: none;
   padding-bottom: 0.12rem;
 }
-header ul li a::before {
+header nav ul li a::before {
   content: "";
   width: 0%;
   height: 2.5px;
@@ -106,13 +123,13 @@ header ul li a::before {
   background-color: #E9E9E9;
   transition: width 0.3s ease-in-out;
 }
-header ul li a:hover::before {
+header nav ul li a:hover::before {
   width: 100%;
 }
-header ul li a.active::before {
+header nav ul li a.active::before {
   width: 100%;
 }
-header button {
+header nav button {
   color: #2E7189;
   width: 148px;
   cursor: pointer;
@@ -126,7 +143,7 @@ header button {
   font-weight: 600;
   font-size: 1.32rem;
 }
-header button:hover {
+header nav button:hover {
   box-shadow: 0 0 0.5rem 0 rgba(46, 113, 137, 0.5);
 }
 
@@ -482,4 +499,373 @@ footer .others .foot-links li a {
   font-family: "Poppins", sans-serif;
   font-size: 1.125rem;
   font-weight: 300;
+}
+
+@media screen and (max-width: 1000px) {
+  .mt-4 {
+    margin-top: 1rem;
+  }
+  header {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  header nav {
+    width: initial;
+  }
+  header nav ul > li > a, header nav button {
+    font-size: 1.25rem;
+  }
+  main .full-page {
+    padding: 3.5rem 2.3rem;
+    background-position: center;
+    background-size: contain;
+  }
+  main .full-page h1 {
+    font-size: 4rem;
+  }
+  main .full-page p {
+    font-size: 1rem;
+  }
+  main .full-page button {
+    font-size: 1rem;
+    width: 155px;
+  }
+  main .numbers {
+    padding-left: 2.3rem;
+    padding-right: 2.3rem;
+  }
+  main .numbers .item span.num {
+    font-size: 2rem;
+  }
+  main .numbers .item span.word {
+    font-size: 1rem;
+  }
+  main .cash-pump {
+    background-size: contain;
+    height: 560px;
+    padding-left: 3.3rem;
+  }
+  main .side-page {
+    padding-top: 6rem;
+    padding-right: 2.3rem;
+  }
+  main .side-page h2 {
+    font-size: 3.8rem;
+    line-height: 125%;
+  }
+  main .side-page p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+  main .side-page button {
+    font-size: 1rem;
+    width: 155px;
+  }
+  main .full-page-two {
+    padding-left: 2.3rem;
+    padding-right: 2.3rem;
+  }
+  main .full-page-two h3 {
+    font-size: 3.8rem;
+  }
+  main .full-page-two p {
+    font-size: 1rem;
+  }
+  main .full-page-two .grid {
+    padding-top: 2.3rem;
+  }
+  main .full-page-two .grid .item {
+    gap: 0.5rem;
+  }
+  main .full-page-two .grid .item .bg {
+    background-size: 50px 77px;
+  }
+  main .full-page-two .grid .item .details .sm-head {
+    font-size: 1.5rem;
+  }
+  main .full-page-two .grid .item .details .quote {
+    font-size: 1rem;
+  }
+  main .carousel {
+    padding-left: 4.3rem;
+    padding-right: 4.3rem;
+    margin: 3rem 0;
+  }
+  main .carousel .prev {
+    left: 1.5rem;
+  }
+  main .carousel .next {
+    right: 1.5rem;
+  }
+  main .cust-bg {
+    padding-left: 2.3rem;
+    height: 600px;
+    background-size: contain;
+  }
+  main .review {
+    padding-right: 2.3rem;
+    height: 600px;
+    background-size: contain;
+  }
+  main .review .person .name {
+    font-size: 1.2rem;
+  }
+  main .review .person .occupation, main .review .person .quote {
+    font-size: 1rem;
+  }
+  main .review .person .quote {
+    line-height: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  main .review .person .sm-btn {
+    left: 11.5rem;
+  }
+  footer {
+    height: 450px;
+    padding-left: 2rem;
+    padding-right: 1.5rem;
+  }
+  footer .others .foot-links {
+    gap: 0.5rem;
+  }
+  footer .others .foot-links li > a {
+    font-size: 1rem;
+  }
+  footer .others .foot-head {
+    font-size: 1.25rem;
+  }
+  footer .brand .footer-quote {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  header {
+    padding-right: 1rem;
+  }
+  header .menu {
+    display: block;
+  }
+  header .nav-links {
+    display: none;
+  }
+  header .nav-links--mobile {
+    display: flex;
+    position: absolute;
+    z-index: 40;
+    right: 0;
+    top: 84px;
+    list-style: none;
+    border-top: 4px solid #E9E9E9;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    padding: 2rem 2rem;
+    min-height: 265px;
+    width: 265px;
+    margin: 0;
+    background-color: rgba(32, 55, 62, 0.2);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    box-shadow: 0 0.5rem 1rem -0.2rem rgba(32, 55, 62, 0.5);
+    gap: 1.5rem;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    animation: fadein 0.3s forwards;
+  }
+  header .nav-links--mobile ul {
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    100% {
+      opacity: 1;
+      width: 265px;
+      height: 381px;
+    }
+  }
+  header .nav-links--mobile--fadeout {
+    animation: fadeout 300ms forwards;
+  }
+  @keyframes fadeout {
+    0% {
+      opacity: 1;
+      width: 265px;
+      height: 381px;
+    }
+    100% {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .col-md-12 {
+    width: 100%;
+  }
+  .order-md-2 {
+    order: 2;
+  }
+  .order-md-1 {
+    order: 1;
+  }
+  header {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  main .full-page, main .numbers, main .side-page, main .cash-pump, main .full-page-two {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  main .carousel {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+  main .cash-pump {
+    height: 300px;
+  }
+  main .cust-bg {
+    display: none;
+  }
+  main .review {
+    padding-left: 5rem;
+    padding-right: 2rem;
+    background: url("assets/Customer-Testimonials-01 1.png") no-repeat right center/35%, url("assets/Union-bg.svg") no-repeat 22px center/60%;
+  }
+  main .carousel .prev {
+    left: 0;
+  }
+  main .carousel .next {
+    right: 0;
+  }
+  footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .col-sm-12 {
+    width: 100%;
+  }
+  main .full-page {
+    padding: 2rem 2rem;
+    padding-bottom: 0;
+  }
+  main .full-page h1 {
+    font-size: clamp(2.3rem, 0.4vw, 3.5rem);
+  }
+  main .full-page button {
+    width: 135px;
+  }
+  main .numbers {
+    padding: 0 1rem;
+    overflow: hidden;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  main .numbers .item {
+    gap: 0.5rem;
+  }
+  main .numbers .item span.num {
+    font-size: 1.3rem;
+  }
+  main .numbers .item span.word {
+    font-size: 0.8rem;
+  }
+  main .side-page {
+    padding: 2rem 2rem;
+  }
+  main .side-page h2 {
+    font-size: clamp(2rem, 0.2vw, 3rem);
+  }
+  main .side-page p {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
+  main .side-page button {
+    width: 135px;
+  }
+  main .full-page-two h3 {
+    font-size: clamp(1.8rem, 0.2vw, 2.8rem);
+  }
+  main .full-page-two p {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
+  main .full-page-two .grid {
+    grid-template-columns: auto;
+    gap: 3rem;
+  }
+  main .full-page-two .grid .item .details .sm-head {
+    font-size: clamp(1rem, 0.2vw, 1.3rem);
+  }
+  main .full-page-two .grid .item .details .quote {
+    font-size: 0.9rem;
+  }
+  main .review {
+    padding-left: 5rem;
+    padding-top: 6rem;
+    background-image: url("assets/Union-bg.svg");
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+  main .review .person .name {
+    font-size: 1rem;
+  }
+  main .review .person .occupation, main .review .person .quote {
+    font-size: 0.89rem;
+  }
+  main .review .person .quote {
+    max-width: 320px;
+  }
+  main .review .person .stars {
+    max-width: 320px;
+  }
+  main .review .person .stars .item svg {
+    height: 22px;
+    width: 24px;
+  }
+  main .review .person .sm-btn {
+    position: initial;
+    margin-top: 1.5rem;
+    justify-content: center;
+  }
+  main .review .person .sm-btn button {
+    width: 35px;
+    height: 35px;
+  }
+  footer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 100%;
+  }
+  footer .brand {
+    align-items: center;
+  }
+  footer .brand .footer-quote {
+    text-align: center;
+  }
+  footer .others {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .others .foot-head {
+    margin-bottom: 0.5rem;
+  }
+  footer .others .foot-links {
+    align-items: center;
+  }
 }/*# sourceMappingURL=styles.css.map */

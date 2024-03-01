@@ -35,3 +35,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+
+const toggleMenu = () => {
+    const navigation = document.querySelector(".nav-links");
+    const burgerMenu = document.querySelector(".menu");
+
+    // Check if the mobile navigation menu is currently open
+    const isMenuOpen = navigation.classList.contains("nav-links--mobile");
+
+    // Toggle the mobile navigation menu
+    if (!isMenuOpen) {
+        // Menu is closed, so open it
+        burgerMenu.style.backgroundImage = 'url("assets/close_menu.svg")';
+        navigation.classList.add("nav-links--mobile");
+    } else {
+        // Menu is open, so close it
+        burgerMenu.style.backgroundImage = 'url("assets/menu.svg")';
+        navigation.classList.add("nav-links--mobile--fadeout");
+        setTimeout(() => {
+            navigation.classList.remove("nav-links--mobile");
+            navigation.classList.remove("nav-links--mobile--fadeout");
+        }, 300);
+    }
+};
+
+
+
