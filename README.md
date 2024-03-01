@@ -3,7 +3,7 @@
 
 # Overview
 ![Desktop view](macbook.png)
-- only responsive for viewport min-width(1200px)
+![Mobile view](mobile.png)
 
 
 
